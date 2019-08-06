@@ -1,4 +1,5 @@
 import json
+import os
 from flask import Blueprint, jsonify, current_app as app
 from os import path
 from oauth2client.service_account import ServiceAccountCredentials
@@ -12,8 +13,8 @@ SCOPE = 'https://www.googleapis.com/auth/analytics.readonly'
 @bp.route("/v1/token")
 def get_access_token():
   # Service Account Credentials
-  CREDENTIALS = json.loads(app.config['SERVICE_ACCOUNT_CREDENTIALS'].encode('unicode_escape'))
-  
+  CREDENTIALS = json.loads(os.environ.get('SERVICE_ACCOUNT_CREDENTIALS'))
+
   return jsonify ({
     'token': ServiceAccountCredentials.from_json_keyfile_dict(CREDENTIALS).create_scoped(SCOPE).get_access_token().access_token
   })
