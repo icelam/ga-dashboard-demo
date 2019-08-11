@@ -1,0 +1,2 @@
+export const GA_API_READY = 'GA_API_READY';
+export const DASHBOARD_ERROR = 'DASHBOARD_ERROR';

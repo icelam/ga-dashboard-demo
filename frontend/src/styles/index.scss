@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/icon?family=Material+Icons'); */
+
+* {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto',"PingFang TC","Lantinghei TC","Heiti TC","Apple LiGothic",微軟正黑體,"Microsoft JhengHei","Microsoft JhengHei UI","Microsoft YaHei","Microsoft YaHei UI","PMingLiU",Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: left;
+  scroll-behavior: smooth;
+}

@@ -1,6 +1,6 @@
-# GA Dashbpard #
+# Simple Google Analytics Dashboard Demo (React + Server-side Authorization) #
 
-Custom Google Analytics Dashboard written in React and Material UI, with python for getting authorization token from Google Cloud Platform.
+Simple Google Analytics Dashboard Demo written in React and Material UI, with python for getting authorization token from Google Cloud Platform.
 
 ## Tech Stack ##
 * Node.js 10.x
@@ -14,7 +14,7 @@ Custom Google Analytics Dashboard written in React and Material UI, with python 
 ***
 
 ## Prerequisite ##
-1. Get a service account by following [this tutorial](https://ga-dev-tools.appspot.com/embed-api/server-side-authorization/), copy the content of JSON file 
+1. Get a service account by following [this tutorial](https://ga-dev-tools.appspot.com/embed-api/server-side-authorization/), copy the content of JSON file
 2. Create config file `./backend/instance/config.py`, put the copied content of step 1 as config `SERVICE_ACCOUNT_CREDENTIALS='{...}'`
 3. Enable [Google Analytics API](https://console.developers.google.com/apis/api/analytics.googleapis.com)
 4. Add the service account created in step 1 to the Google Analytics view you wish to display
@@ -32,5 +32,13 @@ Custom Google Analytics Dashboard written in React and Material UI, with python 
 ## Build production ##
 * Frontend: `yarn build:frontend`
 
+## To-Do ##
+* Datepicker for changing date
+* Refresh token (as token will expire in 1 hour)
+* Responsive handling (the api does not support window resize)
+
+***
+
 ## Reference ##
 * [Embed API Server-side Authorization](https://ga-dev-tools.appspot.com/embed-api/server-side-authorization/)
+* [Google Analytics Embed API Metadata](https://content.googleapis.com/analytics/v3/metadata/ga/columns?embedApiVersion=v1)

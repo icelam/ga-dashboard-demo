@@ -1,0 +1,17 @@
+{
+  "name": "ga-dashboard",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "setup:backend": "cd ./backend && python3 -m venv venv && . venv/bin/activate && pip3 install -r requirements.txt && deactivate",
+    "clean-setup:backend": "rm -rf ./backend/venv && yarn setup:backend",
+    "start:backend": "cd ./backend && . venv/bin/activate && flask run",
+    "start:frontend": "cd ./frontend && yarn start",
+    "start": "./node_modules/.bin/concurrently \"yarn start:backend\" \"yarn start:frontend\"",
+    "build:frontend": "cd ./frontend && yarn build"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.1"
+  }
+}

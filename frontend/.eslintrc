@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "react-app",
+    "airbnb",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@", "./src"],
+          ["@components", "./src/components"],
+          ["@configs", "./src/configs"],
+          ["@containers", "./src/containers"],
+          ["@images", "./src/images"],
+          ["@routes", "./src/routes"],
+          ["@services", "./src/services"],
+          ["@store", "./src/store"],
+          ["@styles", "./src/styles"],
+          ["@utils", "./src/utils"]
+        ],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "rules": {
+    "no-console": [
+      "off"
+    ]
+    ,
+    "no-underscore-dangle": [
+      "off"
+    ],
+    "no-unused-expressions": [
+      2,
+      { "allowTernary": true }
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "max-len": [
+      "error",
+      { "code": 150 }
+    ],
+    "import/no-extraneous-dependencies": [
+      "off"
+    ],
+    "react/jsx-one-expression-per-line": [
+      "off"
+    ]
+  }
+}
